@@ -14,6 +14,9 @@ model = pickle.load(pickle_in)
 st.title("L'immobilier du conté de King vu par Immotep")
 st.subheader("Ich fahre mein auto wunderschön da nacht")
 
+if st.sidebar.button("Clique ici c'est magique, Ouhyaa"):
+    st.image("https://media.tenor.com/images/2f8eff3abbc7faef66de7d1f2303106d/tenor.gif")
+
 # Creation des differentes listes pour les selectbox
 
 zipcode = [
@@ -75,7 +78,7 @@ if st.sidebar.button("Attention vous êtes sûr, non mais vraiment sûr ?"):
 
 # Bouton pour afficher la carte
 
-df = pd.read_csv("df.csv")
+df = pd.read_csv("immo.csv")
 
 if st.sidebar.button("Clique dessus pour afficher la carte lo !"):
     st.map(df)
